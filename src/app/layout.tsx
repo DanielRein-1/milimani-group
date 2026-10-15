@@ -17,8 +17,8 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Mlimani Group | ICT Support",
-    template: "%s | Mlimani Group",
+    default: "Milimani Group | ICT Support",
+    template: "%s | Milimani Group",
   },
   description:
     "Praactical ICT support, networking, systems administration and web support for offices, schools, shops and small businesses in Busia, Kenya.",
