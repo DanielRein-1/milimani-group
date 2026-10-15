@@ -74,11 +74,11 @@ export function Footer() {
 
         <div className="mt-10 border-t border-[#1F2A37] pt-6">
           <div className="flex flex-col gap-3 text-sm text-[#8B98A8] sm:flex-row sm:items-center sm:justify-between">
-            <p>© {currentYear} Mlimani Group. All rights reserved.</p>
+            <p>© {currentYear} Milimani Group. All rights reserved.</p>
             <div className="flex items-center gap-4">
               <a href="#" className="transition-colors hover:text-[#E6EDF3]">Privacy Policy</a>
               <a href="#" className="transition-colors hover:text-[#E6EDF3]">Terms of Use</a>
-              <span className="text-[#8B98A8]">@ Mlimani Group company.</span>
+              <span className="text-[#8B98A8]">@ Milimani Group company.</span>
             </div>
           </div>
         </div>

@@ -32,7 +32,7 @@ export function Header() {
             </svg>
           </span>
           <span className="text-sm font-semibold tracking-[0.2em] text-[#E6EDF3] sm:text-base">
-            MLIMANI GROUP
+            MILIMANI GROUP
           </span>
         </Link>
 
