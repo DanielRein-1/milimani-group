@@ -1,37 +1,38 @@
-
 import type { MetadataRoute } from "next";
 
+import { siteLastUpdated, siteUrl } from "@/content/site";
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://milimani-group.vercel.app";
+  const lastModified = new Date(siteLastUpdated);
 
   return [
     {
-      url: baseUrl,
-      lastModified: new Date(),
+      url: siteUrl,
+      lastModified,
       changeFrequency: "monthly",
       priority: 1,
     },
     {
-      url: `${baseUrl}/about`,
-      lastModified: new Date(),
+      url: `${siteUrl}/about`,
+      lastModified,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/services`,
-      lastModified: new Date(),
+      url: `${siteUrl}/services`,
+      lastModified,
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/projects`,
-      lastModified: new Date(),
+      url: `${siteUrl}/projects`,
+      lastModified,
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/contact`,
-      lastModified: new Date(),
+      url: `${siteUrl}/contact`,
+      lastModified,
       changeFrequency: "monthly",
       priority: 0.8,
     },

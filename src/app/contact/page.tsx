@@ -1,8 +1,19 @@
-import { ContactForm } from "@/components/contact-form";
+import type { Metadata } from "next";
 
-export const metadata = {
+import { ContactForm } from "@/components/contact-form";
+import { siteUrl } from "@/content/site";
+
+export const metadata: Metadata = {
   title: "Contact",
-  description: "Contact Mlimani Group for practical support and service inquiries.",
+  description: "Contact Milimani Group in Busia, Kenya via WhatsApp or email for practical ICT support and service inquiries.",
+  alternates: {
+    canonical: "/contact",
+  },
+  openGraph: {
+    url: `${siteUrl}/contact`,
+    title: "Contact | Milimani Group",
+    description: "Contact Milimani Group in Busia, Kenya via WhatsApp or email for practical ICT support and service inquiries.",
+  },
 };
 
 export default function ContactPage() {

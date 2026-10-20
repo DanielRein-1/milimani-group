@@ -4,8 +4,10 @@ export type NavItem = {
 };
 
 export type ServiceItem = {
+  id: string;
   title: string;
   description: string;
+  shortDescription: string;
   intro: string;
   coverage: string[];
   suitability: string;
@@ -24,18 +26,29 @@ export type FaqItem = {
   answer: string;
 };
 
+export const siteUrl = "https://milimani-group.vercel.app";
+export const siteLastUpdated = "2026-10-20";
+
 export const company = {
-  name: "MLIMANI GROUP",
+  name: "MILIMANI GROUP",
+  displayName: "Milimani Group",
   shortLabel: "ICT SUPPORT • NETWORKING • WEB",
   description:
-    "Practical ICT support, networking, systems administration and web support for everyday business needs.",
+    "Practical ICT support, networking, systems administration and web support for everyday business needs in Busia, Kenya.",
   aboutIntro:
-    "The website presents ICT support for offices, schools, shops, and small businesses in Busia and surrounding areas.",
+    "Milimani Group provides practical ICT support for offices, schools, shops, and small businesses in Busia, Kenya and surrounding areas.",
   contact: {
     phoneDisplay: "0105668218",
+    phoneInternational: "+254105668218",
     phoneHref: "https://wa.me/254105668218",
-    email: "milimanigroup485@gmail.com",
+    telHref: "tel:+254105668218",
+    email: "info@milimani.ke",
+    emailHref: "mailto:info@milimani.ke",
+    secondaryEmail: "milimanigroup485@gmail.com",
+    secondaryEmailHref: "mailto:milimanigroup485@gmail.com",
     location: "Busia, Kenya | P.O. Box 485, Busia",
+    locality: "Busia",
+    country: "KE",
   },
 };
 
@@ -49,11 +62,14 @@ export const navItems: NavItem[] = [
 
 export const serviceHighlights = [
   {
+    id: "it-support",
     title: "IT Support & Maintenance",
     description:
       "Reliable troubleshooting and routine checks to keep computers, devices and office systems running smoothly.",
+    shortDescription:
+      "Reliable troubleshooting and routine checks to keep devices and systems working smoothly.",
     intro:
-      "We help with day-to-day technical issues so teams can keep working without avoidable disruptions.",
+      "We help with day-to-day technical issues so teams in Busia can keep working without avoidable disruptions.",
     coverage: [
       "Computer and printer troubleshooting",
       "Routine maintenance checks",
@@ -64,9 +80,12 @@ export const serviceHighlights = [
     icon: "support",
   },
   {
+    id: "networking",
     title: "Networking & Wi-Fi",
     description:
       "Practical network setup and troubleshooting for reliable connectivity across rooms, office spaces and shared work areas.",
+    shortDescription:
+      "Connectivity support for dependable internet access across offices, classrooms and work areas.",
     intro:
       "We review the setup, identify weak points and help improve day-to-day network reliability.",
     coverage: [
@@ -79,9 +98,12 @@ export const serviceHighlights = [
     icon: "network",
   },
   {
+    id: "systems-administration",
     title: "Systems Administration",
     description:
       "Careful setup and support for user accounts, devices, updates and day-to-day administration tasks.",
+    shortDescription:
+      "Careful setup, updates and user support for stable day-to-day operations.",
     intro:
       "We handle common administration needs with a focus on safe setup, simple records and responsible access control.",
     coverage: [
@@ -94,9 +116,12 @@ export const serviceHighlights = [
     icon: "admin",
   },
   {
+    id: "security-backups",
     title: "Security & Backups",
     description:
       "Basic security hygiene and backup routines to reduce risk and help protect important information.",
+    shortDescription:
+      "Practical checks and backup routines to help protect important information and systems.",
     intro:
       "We focus on practical security habits, checks and backup routines that make a meaningful difference for small teams.",
     coverage: [
@@ -109,9 +134,12 @@ export const serviceHighlights = [
     icon: "security",
   },
   {
+    id: "web-database",
     title: "Web & Database Support",
     description:
       "Support for simple website updates, maintenance and common database-related issues for small business operations.",
+    shortDescription:
+      "Simple website and database maintenance to support everyday business activity.",
     intro:
       "We support the practical needs of organizations that rely on simple online systems and business data tools.",
     coverage: [
@@ -125,13 +153,7 @@ export const serviceHighlights = [
   },
 ] as const satisfies ServiceItem[];
 
-export const homeServices = [
-  "IT Support & Maintenance",
-  "Networking & Wi-Fi",
-  "Systems Administration",
-  "Security & Backups",
-  "Web & Database Support",
-];
+export const homeServices = serviceHighlights.map((service) => service.title);
 
 export const approachSteps = [
   {

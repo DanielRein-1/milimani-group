@@ -25,7 +25,6 @@
   --color-success: var(--success);
   --color-error: var(--error);
   --font-sans: var(--font-inter);
-  --font-mono: var(--font-jetbrains-mono);
 }
 
 html {

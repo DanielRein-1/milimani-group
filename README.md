@@ -1,30 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Milimani Group Website
+
+Official website for **Milimani Group**, an ICT support and services company based in Busia, Kenya (`https://milimani-group.vercel.app`).
+
+## Overview
+
+- **Framework:** Next.js 16.4.0 (App Router, TypeScript, Tailwind CSS v4)
+- **Centralized Content & Contact Configuration:** [`src/content/site.ts`](src/content/site.ts)
+- **Primary Routes:**
+  - `/` — Homepage
+  - `/about` — About Milimani Group
+  - `/services` — ICT Support, Networking, Systems Administration, Security & Backups, Web & Database Support
+  - `/projects` — Sample ICT project scenarios
+  - `/contact` — Direct WhatsApp, email, and inquiry form
+  - `/privacy` — Privacy Notice & Terms of Use
 
 ## Getting Started
 
-First, run the development server:
+Run the local development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Verification Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npx tsc --noEmit
+npm run lint
+npm run build
+```

@@ -6,9 +6,10 @@ type ButtonProps = {
   children: ReactNode;
   variant?: "primary" | "secondary";
   className?: string;
+  ariaLabel?: string;
 };
 
-export function Button({ href, children, variant = "primary", className = "" }: ButtonProps) {
+export function Button({ href, children, variant = "primary", className = "", ariaLabel }: ButtonProps) {
   const base =
     "inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-medium transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#22D3EE] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0B0F14]";
 
@@ -19,8 +20,16 @@ export function Button({ href, children, variant = "primary", className = "" }: 
       "border border-[#1F2A37] bg-transparent text-[#E6EDF3] hover:border-[#22D3EE] hover:text-[#E6EDF3]",
   };
 
+  const isExternal = href.startsWith("http://") || href.startsWith("https://");
+
   return (
-    <Link href={href} className={`${base} ${variants[variant]} ${className}`}>
+    <Link
+      href={href}
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noopener noreferrer" : undefined}
+      aria-label={ariaLabel}
+      className={`${base} ${variants[variant]} ${className}`}
+    >
       {children}
     </Link>
   );
