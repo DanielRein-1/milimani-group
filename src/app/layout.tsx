@@ -15,14 +15,19 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
 });
 
+
 export const metadata: Metadata = {
   title: {
     default: "Milimani Group | ICT Support",
     template: "%s | Milimani Group",
   },
   description:
-    "Praactical ICT support, networking, systems administration and web support for offices, schools, shops and small businesses in Busia, Kenya.",
+    "Practical ICT support, networking, systems administration and web support for offices, schools, shops and small businesses in Busia, Kenya.",
+  verification: {
+    google: "R3wBcbEaDG7hR5xQpnTd9cFxsGIPSzqpszg7g8ORit4",
+  },
 };
+
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
